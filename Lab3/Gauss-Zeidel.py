@@ -30,9 +30,9 @@ while norma_vector(x_k1, x_k) > epsilon:
         for j in range(3):
             if j != i:
                 if j > i:
-                    x_k1[i] += -A[i][j] / A[i][i] * x_k[j]
-                if j < i:
                     x_k1[i] += -A[i][j] / A[i][i] * x_k1[j]
+                if j < i:
+                    x_k1[i] += -A[i][j] / A[i][i] * x_k[j]
     n += 1
 
 print(x_k1)
